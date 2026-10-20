@@ -1,0 +1,96 @@
+:root {
+    --bg: #f4f6fb;
+    --surface: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --border: #e5e7eb;
+    --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+}
+
+main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+}
+
+h1 { margin: 0 0 .25rem; font-size: 1.9rem; }
+p  { margin: .25rem 0; color: var(--muted); }
+
+/* Formulario */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    align-items: end;
+    margin: 1.25rem 0 .5rem;
+    padding: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+label {
+    display: block;
+    font-size: .85rem;
+    font-weight: 600;
+    margin-bottom: .25rem;
+}
+
+input, select {
+    padding: .55rem .7rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font: inherit;
+    background: #fff;
+}
+
+input { min-width: 220px; }
+
+input:focus, select:focus, button:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 1px;
+}
+
+/* Botones */
+button {
+    padding: .55rem 1rem;
+    border: 0;
+    border-radius: 8px;
+    background: var(--primary);
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .15s;
+}
+button:hover { background: var(--primary-dark); }
+
+/* Mensajes */
+[role='status'] { min-height: 1.5rem; color: #047857; font-weight: 500; }
+[role='alert']  { color: #b91c1c; font-weight: 600; }
+
+/* Tarjetas */
+article {
+    margin-top: .9rem;
+    padding: 1rem 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--primary);
+    border-radius: var(--radius);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .06);
+}
+article h3 { margin: 0 0 .35rem; font-size: 1.1rem; }
+article p  { margin: .1rem 0; }
+article button { margin-top: .6rem; padding: .35rem .8rem; font-size: .85rem; }
